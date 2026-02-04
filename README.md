@@ -1,2 +1,14 @@
-# jade-snow-medical-website
-Official website for Jade Snow Medical: advancing safer surgery through lifelike 3D printed surgical models and decentralized clinical training networks.
+# Jade Snow Medical — Website
+
+This repository contains the official website for **Jade Snow Medical**, a medical technology company advancing safer surgery through lifelike 3D-printed models and decentralised surgical training networks.
+
+## Tech Stack
+- Astro
+- React
+- Tailwind CSS
+
+## Local Development
+```bash
+npm install
+npm run dev
+
