@@ -1,10 +1,134 @@
 ---
+import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
 ---
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Products - Jade Snow Medical</title>
   </head>
-  <body>
-    <h1>Products</h1>
+  <body class="bg-white text-gray-900">
+    <Navbar />
+    
+    <main class="max-w-7xl mx-auto px-6 py-16">
+      <section class="text-center mb-16">
+        <h1 class="text-4xl font-semibold text-gray-900 mb-4">
+          NeuroPrint: Neurosurgical Training Models
+        </h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Patient-specific 3D-printed anatomical models for neurosurgical training. 
+          Realistic anatomy, repeatable practice, ethical alternative to cadavers.
+        </p>
+      </section>
+
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-center">Current Models</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <div class="h-64 bg-gray-100 flex items-center justify-center">
+              <span class="text-gray-400">Foramen magnum model image</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-3">Foramen Magnum Decompression Model</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Anatomically accurate posterior fossa model for practicing foramen magnum 
+                decompression procedures. Includes occipital bone, C1 vertebra, and relevant 
+                anatomical landmarks.
+              </p>
+              <p class="text-xs text-gray-500 font-semibold">
+                Use: Chiari malformation surgery training, suboccipital craniectomy practice
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <div class="h-64 bg-gray-100 flex items-center justify-center">
+              <span class="text-gray-400">EVD model image</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-3">External Ventricular Drain (EVD) Model</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Realistic model for practicing EVD insertion technique. Features accurate 
+                ventricular anatomy and surface landmarks for safe catheter placement.
+              </p>
+              <p class="text-xs text-gray-500 font-semibold">
+                Use: Emergency neurosurgical procedure training, resident skill development
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <div class="h-64 bg-gray-100 flex items-center justify-center">
+              <span class="text-gray-400">Skull drilling model image</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-3">Cranial Drilling Practice Model</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Half skull model with brain and dura mater. Designed for practicing 
+                craniotomy techniques, burr hole placement, and safe drilling without 
+                dural penetration.
+              </p>
+              <p class="text-xs text-gray-500 font-semibold">
+                Use: Craniotomy training, surgical skills lab, instrument familiarization
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-center">Why NeuroPrint Models?</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold mb-4">For Training Programmes</h3>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Repeatable practice without cadaver dependency</li>
+              <li>• Multiple residents can train simultaneously</li>
+              <li>• Consistent anatomical quality</li>
+              <li>• No ethical or storage concerns</li>
+              <li>• Lower cost per training session</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold mb-4">For Surgeons</h3>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Build muscle memory for critical procedures</li>
+              <li>• Practice rare or high-risk cases safely</li>
+              <li>• Train with actual surgical instruments</li>
+              <li>• Realistic tactile feedback</li>
+              <li>• Patient-specific anatomy when needed</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-center">Model Development</h2>
+        <div class="bg-blue-50 rounded-lg p-8">
+          <p class="text-gray-700 text-center max-w-3xl mx-auto">
+            Our models are derived from real patient MRI and CT scans, processed by bioengineers 
+            with clinical neurosurgical input. Each model undergoes validation with practicing 
+            neurosurgeons to ensure anatomical accuracy and surgical realism.
+          </p>
+        </div>
+      </section>
+
+      <section class="bg-gray-50 rounded-lg p-8 text-center">
+        <h2 class="text-2xl font-semibold mb-4">Partner With Us</h2>
+        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+          We work with hospitals, surgical training programmes, and medical schools worldwide. 
+          Contact us to discuss bulk orders, custom models, or collaborative development.
+        </p>
+        <a href="/contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
+          Get in Touch
+        </a>
+      </section>
+    </main>
   </body>
 </html>
