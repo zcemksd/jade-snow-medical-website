@@ -1,10 +1,125 @@
 ---
+import Navbar from "../components/Navbar.astro";
+import NetworkMap from "../components/NetworkMap.astro";
+import "../styles/global.css";
 ---
-<html>
+<html lang="en">
   <head>
-    <title>Network - Jade Snow Medical</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Decentralised Network - Jade Snow Medical</title>
   </head>
-  <body>
-    <h1>Network</h1>
+  <body class="bg-white text-gray-900">
+    <Navbar />
+    
+    <main class="max-w-7xl mx-auto px-6 py-16">
+      <section class="text-center mb-16">
+        <h1 class="text-4xl font-semibold text-gray-900 mb-4">
+          Decentralised Production Network
+        </h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Centralised expertise in medical imaging and model design. 
+          Distributed manufacturing for speed, sustainability, and global reach.
+        </p>
+      </section>
+
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-center">How It Works</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="bg-blue-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-blue-600">1</span>
+            </div>
+            <h3 class="font-semibold mb-2">Centralised Processing</h3>
+            <p class="text-gray-600 text-sm">
+              Medical scans processed by our expert team. IP and clinical quality controlled centrally.
+            </p>
+          </div>
+          
+          <div class="text-center">
+            <div class="bg-blue-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-blue-600">2</span>
+            </div>
+            <h3 class="font-semibold mb-2">Secure Transfer</h3>
+            <p class="text-gray-600 text-sm">
+              Encrypted digital files sent to nearest production node.
+            </p>
+          </div>
+          
+          <div class="text-center">
+            <div class="bg-blue-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-blue-600">3</span>
+            </div>
+            <h3 class="font-semibold mb-2">Local Production</h3>
+            <p class="text-gray-600 text-sm">
+              3D printing and post-processing completed locally. Fast delivery, low environmental impact.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <NetworkMap />
+        <h2 class="text-2xl font-semibold mb-8 text-center">Current Production Nodes</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <div class="h-48 bg-gray-100 flex items-center justify-center">
+              <span class="text-gray-400">London node image</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">London, United Kingdom</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Primary European hub. Serves UK hospitals and training centres. 
+                Established partnerships with NHS trusts.
+              </p>
+              <p class="text-xs text-gray-500">
+                Capabilities: Neurosurgical models, spine models, cranial reconstruction
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <div class="h-48 bg-gray-100 flex items-center justify-center">
+              <span class="text-gray-400">Zurich node image</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Zurich, Switzerland</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Swiss precision manufacturing. Serves Central Europe. 
+                Access to advanced materials and quality control.
+              </p>
+              <p class="text-xs text-gray-500">
+                Capabilities: High-precision cranial models, vascular structures
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <div class="h-48 bg-gray-100 flex items-center justify-center">
+              <span class="text-gray-400">Taiwan node image</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Taiwan</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Asia-Pacific hub. Fast turnaround for regional hospitals. 
+                Expanding access in underserved markets.
+              </p>
+              <p class="text-xs text-gray-500">
+                Capabilities: Full model range, rapid prototyping
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="mt-16 bg-gray-50 rounded-lg p-8 text-center">
+        <h2 class="text-2xl font-semibold mb-4">Expanding Globally</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We are actively seeking partners to establish nodes in Europe, North America, and Asia. Our goal is to create a truly global network that can serve hospitals worldwide with fast, high-quality models. If you are interested in becoming a production partner, please <a href="/contact" class="text-blue-600 hover:underline">contact us</a>.
+        </p>
+      </section>
+    </main>
   </body>
 </html>

@@ -1,0 +1,42 @@
+---
+---
+<div id="map" class="w-full h-96 rounded-lg border border-gray-200 mb-16"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize map centered on Europe
+    const map = L.map('map').setView([48.0, 10.0], 4);
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    // Define custom icon
+    const nodeIcon = L.divIcon({
+      className: 'custom-node-icon',
+      html: '<div style="background-color: #2563eb; width: 16px; height: 16px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+      iconSize: [22, 22],
+      iconAnchor: [11, 11]
+    });
+
+    // London node
+    L.marker([51.5074, -0.1278], { icon: nodeIcon })
+      .addTo(map)
+      .bindPopup('<b>London, UK</b><br>Primary European hub');
+
+    // Zurich node
+    L.marker([47.3769, 8.5417], { icon: nodeIcon })
+      .addTo(map)
+      .bindPopup('<b>Zurich, Switzerland</b><br>Central European production');
+
+    // Taiwan node
+    L.marker([25.0330, 121.5654], { icon: nodeIcon })
+      .addTo(map)
+      .bindPopup('<b>Taiwan</b><br>Asia-Pacific hub');
+  });
+</script>
