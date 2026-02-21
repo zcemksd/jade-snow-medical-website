@@ -1,10 +1,178 @@
 ---
+import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
 ---
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Clinical Use - Jade Snow Medical</title>
   </head>
-  <body>
-    <h1>Clinical Use</h1>
+  <body class="bg-white text-gray-900">
+    <Navbar />
+    
+    <main class="max-w-7xl mx-auto px-6 py-16">
+      <section class="text-center mb-16">
+        <h1 class="text-4xl font-semibold text-gray-900 mb-4">
+          Clinical Education in Action
+        </h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Our models support neurosurgical training programmes at leading institutions worldwide. 
+          From single-day workshops to comprehensive fellowship curricula, we enable hands-on 
+          learning with realistic, patient-specific anatomy.
+        </p>
+      </section>
+
+      <!-- Featured Partner -->
+      <section class="mb-16 bg-blue-50 rounded-lg p-8">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-2xl font-semibold mb-4">
+              National Hospital for Neurology and Neurosurgery
+            </h2>
+            <p class="text-gray-700 mb-4">
+              Queen Square, London — University College London Hospitals NHS Foundation Trust
+            </p>
+            <p class="text-gray-600 mb-6">
+              Our flagship partnership. Since 2023, we have delivered over 300 patient-specific 
+              models supporting 10+ neurosurgical training courses, reaching 100+ surgeons in 
+              training across multiple subspecialties.
+            </p>
+            <div class="grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <div class="text-2xl font-bold text-blue-600 mb-1">92%</div>
+                <div class="text-gray-600">Satisfaction Score</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-blue-600 mb-1">9+/10</div>
+                <div class="text-gray-600">Usability Rating</div>
+              </div>
+            </div>
+          </div>
+          <div class="h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+            <span class="text-gray-400">NHNN/UCLH photo</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Course History Table -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-center">Training Courses Delivered</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full border border-gray-200 rounded-lg">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700">Date</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700">Training Course</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700">Model Quantity</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">Jun. 2023</td>
+                <td class="px-6 py-4 text-sm text-gray-900">Skull Base Training</td>
+                <td class="px-6 py-4 text-sm text-gray-600">33</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2023</td>
+                <td class="px-6 py-4 text-sm text-gray-900">EVD Insertion</td>
+                <td class="px-6 py-4 text-sm text-gray-600">10</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2023</td>
+                <td class="px-6 py-4 text-sm text-gray-900">Skull Base Training</td>
+                <td class="px-6 py-4 text-sm text-gray-600">10</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2023</td>
+                <td class="px-6 py-4 text-sm text-gray-900">Foramen Magnum Decompression</td>
+                <td class="px-6 py-4 text-sm text-gray-600">20</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2023</td>
+                <td class="px-6 py-4 text-sm text-gray-900">Lumbar Puncture</td>
+                <td class="px-6 py-4 text-sm text-gray-600">3</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">Feb. 2024</td>
+                <td class="px-6 py-4 text-sm text-gray-900">Temporal Bone Training</td>
+                <td class="px-6 py-4 text-sm text-gray-600">60</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2024</td>
+                <td class="px-6 py-4 text-sm text-gray-900">Burr Hole / Craniotomy / Craniectomy</td>
+                <td class="px-6 py-4 text-sm text-gray-600">12</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">Mar. 2025</td>
+                <td class="px-6 py-4 text-sm text-gray-900">Lateral Skull Base Approaches</td>
+                <td class="px-6 py-4 text-sm text-gray-600">60</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">Apr. 2025</td>
+                <td class="px-6 py-4 text-sm text-gray-900">Foramen Magnum Decompression</td>
+                <td class="px-6 py-4 text-sm text-gray-600">20</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">May. 2025</td>
+                <td class="px-6 py-4 text-sm text-gray-900">Neural Canal (Research)</td>
+                <td class="px-6 py-4 text-sm text-gray-600">110</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">Oct. 2025</td>
+                <td class="px-6 py-4 text-sm text-gray-900">Functional Neurosurgery</td>
+                <td class="px-6 py-4 text-sm text-gray-600">2</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2025</td>
+                <td class="px-6 py-4 text-sm text-gray-900">Drills & Skills Course</td>
+                <td class="px-6 py-4 text-sm text-gray-600">12</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2025</td>
+                <td class="px-6 py-4 text-sm text-gray-900">Pituitary Surgery</td>
+                <td class="px-6 py-4 text-sm text-gray-600">22</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Image Gallery Placeholder -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-center">Training in Action</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
+            <span class="text-gray-400">Course photo 1</span>
+          </div>
+          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
+            <span class="text-gray-400">Course photo 2</span>
+          </div>
+          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
+            <span class="text-gray-400">Course photo 3</span>
+          </div>
+          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
+            <span class="text-gray-400">Course photo 4</span>
+          </div>
+          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
+            <span class="text-gray-400">Course photo 5</span>
+          </div>
+          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
+            <span class="text-gray-400">Course photo 6</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-gray-50 rounded-lg p-8 text-center">
+        <h2 class="text-2xl font-semibold mb-4">Bring Jade Snow Medical to Your Institution</h2>
+        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+          We partner with hospitals and training programmes worldwide. Contact us to discuss 
+          how our models can enhance your surgical education curriculum.
+        </p>
+        <a href="/contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
+          Get in Touch
+        </a>
+      </section>
+    </main>
   </body>
 </html>

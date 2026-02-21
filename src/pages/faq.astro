@@ -1,10 +1,197 @@
 ---
+import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
 ---
-<html>
+<html lang="en">
   <head>
-    <title>FAQ - Jade Snow Medical</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>FAQs - Jade Snow Medical</title>
   </head>
-  <body>
-    <h1>FAQ</h1>
+  <body class="bg-white text-gray-900">
+    <Navbar />
+    
+    <main class="max-w-4xl mx-auto px-6 py-16">
+      <section class="text-center mb-16">
+        <h1 class="text-4xl font-semibold text-gray-900 mb-4">
+          Frequently Asked Questions
+        </h1>
+        <p class="text-lg text-gray-600">
+          Common questions about our models, training programmes, and partnership opportunities.
+        </p>
+      </section>
+
+      <section class="space-y-8">
+        
+        <!-- Product Questions -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">About Our Models</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-semibold mb-2">How realistic are the models?</h3>
+              <p class="text-gray-700">
+                Our models are derived from real patient MRI and CT scans, preserving individual anatomical 
+                variations. They offer realistic tactile feedback for drilling, cutting, and handling, 
+                validated by neurosurgeons for training use. Surgeons report 92% satisfaction and 9+/10 
+                usability scores.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Can models be customised for specific cases?</h3>
+              <p class="text-gray-700">
+                Yes. We create patient-specific models from provided MRI/CT scans (DICOM format). 
+                We can replicate tumours, vascular abnormalities, fractures, and other pathologies. 
+                Typical turnaround is 2-3 weeks from scan to delivery.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-2">What procedures can be practiced with these models?</h3>
+              <p class="text-gray-700">
+                Current models support: EVD insertion, foramen magnum decompression, craniotomy/craniectomy, 
+                burr hole placement, skull base approaches, and temporal bone drilling. We are continuously 
+                developing models for additional neurosurgical procedures.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Can models be reused?</h3>
+              <p class="text-gray-700">
+                Models are designed for single-use training to maintain anatomical realism. However, 
+                for institutions requiring multiple training sessions, we offer bulk pricing and regular 
+                delivery schedules.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Training & Education -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">Training & Education</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Do you run training courses?</h3>
+              <p class="text-gray-700">
+                We partner with hospitals and training centres to supply models for their courses. 
+                We do not directly deliver surgical training, but work closely with course organisers 
+                to ensure models meet educational objectives. We have supported 10+ courses at leading 
+                institutions including UCLH National Hospital for Neurology and Neurosurgery.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Are the models suitable for resident training programmes?</h3>
+              <p class="text-gray-700">
+                Absolutely. Our models are used extensively in neurosurgical residency programmes 
+                for procedural skills development. They allow residents to practice rare or high-risk 
+                procedures safely and repeatedly, building muscle memory before operating on patients.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Can models be used for patient education?</h3>
+              <p class="text-gray-700">
+                Yes. Patient-specific models help surgeons explain procedures to patients and families, 
+                improving informed consent. Some institutions use models to demonstrate planned surgical 
+                approaches and expected outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ethics & Sustainability -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">Ethics & Sustainability</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Why use 3D-printed models instead of cadavers?</h3>
+              <p class="text-gray-700">
+                Cadaveric training faces ethical, logistical, and cost challenges. Our models provide 
+                a repeatable, consistent, and ethical alternative. Trainees can practice the same procedure 
+                multiple times without cadaver scarcity constraints. Models are available year-round, 
+                require no special storage, and avoid religious or cultural concerns.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-2">How does the decentralised network reduce environmental impact?</h3>
+              <p class="text-gray-700">
+                Our production nodes in London, Zurich, and Taiwan enable local manufacturing close to 
+                end users. This reduces shipping distances, carbon emissions, and delivery times. 
+                Digital files are transferred securely, and only the final physical model is shipped.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-2">What happens to patient data used for custom models?</h3>
+              <p class="text-gray-700">
+                All patient data is anonymised before processing. We handle DICOM files according to 
+                data protection regulations (GDPR, HIPAA-compliant workflows available). Original scans 
+                are not stored after model creation unless explicitly requested for research partnerships.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partnerships & Access -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">Partnerships & Access</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-semibold mb-2">How can my hospital partner with Jade Snow Medical?</h3>
+              <p class="text-gray-700">
+                We work with hospitals, training centres, and medical schools worldwide. Contact us 
+                via our <a href="/contact" class="text-blue-600 hover:underline">contact page</a> to 
+                discuss bulk orders, ongoing training partnerships, or collaborative model development.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Do you support institutions in low-resource settings?</h3>
+              <p class="text-gray-700">
+                Yes. Our decentralised model enables us to reduce costs and expand access. We are 
+                exploring partnerships and grant funding to support surgical training in underserved 
+                regions. Contact us to discuss options.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Can researchers use your models?</h3>
+              <p class="text-gray-700">
+                Absolutely. We collaborate with academic institutions on surgical technique validation, 
+                device testing, and education research. We have supported research projects with over 
+                100 models. Contact us to discuss research partnerships.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-2">How do I order models?</h3>
+              <p class="text-gray-700">
+                Contact us through our <a href="/contact" class="text-blue-600 hover:underline">contact page</a> 
+                with details about your use case (training course, research, pre-operative planning). 
+                We'll discuss model specifications, quantities, and timelines. Typical turnaround is 
+                2-3 weeks.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mt-16 bg-gray-50 rounded-lg p-8 text-center">
+        <h2 class="text-2xl font-semibold mb-4">Still have questions?</h2>
+        <p class="text-gray-600 mb-6">
+          We're happy to discuss your specific needs and how Jade Snow Medical can support your training programme.
+        </p>
+        <a href="/contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
+          Get in Touch
+        </a>
+      </section>
+    </main>
   </body>
 </html>

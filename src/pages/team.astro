@@ -1,10 +1,174 @@
 ---
+import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
 ---
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Team - Jade Snow Medical</title>
   </head>
-  <body>
-    <h1>Team</h1>
+  <body class="bg-white text-gray-900">
+    <Navbar />
+    
+    <main class="max-w-7xl mx-auto px-6 py-16">
+      <section class="text-center mb-16">
+        <h1 class="text-4xl font-semibold text-gray-900 mb-4">
+          Our Team
+        </h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          A multidisciplinary team combining clinical insight, bioengineering expertise, 
+          and global healthcare experience.
+        </p>
+      </section>
+
+      <section class="space-y-16">
+        
+        <!-- Danny Chen -->
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1">
+            <div class="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+              <span class="text-gray-400">Photo</span>
+            </div>
+            <h3 class="text-2xl font-semibold mb-1">Jia-En Chen (Danny)</h3>
+            <p class="text-blue-600 font-medium mb-2">CEO & Founder</p>
+            <p class="text-sm text-gray-500">
+              MPhil/PhD Candidate, University College London
+            </p>
+          </div>
+          
+          <div class="md:col-span-2">
+            <p class="text-gray-700 mb-4">
+              Danny is a researcher and educator in medical physics and bioengineering, currently 
+              pursuing an MPhil/PhD at University College London. He holds an MSc in Automation 
+              and Control from National Taiwan University of Science and Technology, and a BSc 
+              in Public Health from National Defense Medical Center, Taipei.
+            </p>
+            
+            <p class="text-gray-700 mb-4">
+              He serves as a lecturer at National Defense Medical University, teaching Python 
+              programming and medical 3D printing, and has been a researcher at Tri-Service 
+              General Hospital's Medical 3D Printing Center since 2018. His international 
+              experience includes time at MIT Media Lab (2016) and the Harvard-MIT Bio Academy.
+            </p>
+
+            <p class="text-gray-700 mb-6">
+              Danny founded Medical Fablab NDMC in 2014, a pioneering makerspace supporting 
+              medical innovation in Taiwan. He is a member of Accelerate Cambridge at Cambridge 
+              Judge Business School and co-founder of Lifefabs Institute.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <h4 class="font-semibold mb-2 text-gray-900">Education</h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• MPhil/PhD, University College London (current)</li>
+                  <li>• MSc, Automation & Control, NTUST</li>
+                  <li>• BSc, Public Health, NDMC</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-200" />
+
+        <!-- Karol Duque -->
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1">
+            <div class="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+              <span class="text-gray-400">Photo</span>
+            </div>
+            <h3 class="text-2xl font-semibold mb-1">Karol Duque</h3>
+            <p class="text-blue-600 font-medium mb-2">Head of Engineering</p>
+            <p class="text-sm text-gray-500">
+              MEng Biomedical Engineering, University College London
+            </p>
+          </div>
+          
+          <div class="md:col-span-2">
+            <p class="text-gray-700 mb-4">
+              Karol holds an integrated Master's degree in Biomedical Engineering from 
+              University College London, with specialization in 3D printing and electronics 
+              for medical applications.
+            </p>
+            
+            <p class="text-gray-700 mb-4">
+              She has been developing neurosurgical training models since 2023, when she completed 
+              an internship working directly on the NeuroPrint model development under Danny's 
+              supervision. Her technical expertise spans the complete workflow from medical 
+              imaging to final model production.
+            </p>
+
+            <p class="text-gray-700 mb-6">
+              Karol leads the engineering development of all current models and oversees 
+              quality control across the production network. Her background in electronics 
+              integration enables future development of sensor-equipped training models.
+            </p>
+
+            <div class="text-sm">
+              <h4 class="font-semibold mb-2 text-gray-900">Expertise</h4>
+              <ul class="text-gray-600 space-y-1">
+                <li>• 3D printing and post-processing</li>
+                <li>• Image segmentation</li>
+                <li>• Electronics integration for medical devices</li>
+                <li>• Model validation and quality control</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-200" />
+
+        <!-- Sherry Chen -->
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1">
+            <div class="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+              <span class="text-gray-400">Photo</span>
+            </div>
+            <h3 class="text-2xl font-semibold mb-1">Sherry Chen</h3>
+            <p class="text-blue-600 font-medium mb-2">Head of Marketing</p>
+            <p class="text-sm text-gray-500">
+              MSc Marketing (current), King's College London
+            </p>
+          </div>
+          
+          <div class="md:col-span-2">
+            <p class="text-gray-700 mb-4">
+              Sherry holds a medical degree from Taiwan and a Master's degree in ocean medicine, 
+              combining clinical insight with specialized research experience. She is currently 
+              pursuing an MSc in Marketing at King's College London.
+            </p>
+            
+            <p class="text-gray-700 mb-6">
+              Her unique background bridges clinical practice, research, and commercial strategy. 
+              Sherry leads market development, hospital partnerships, and communication with 
+              clinical stakeholders, ensuring that Jade Snow Medical's products align with 
+              real-world surgical training needs.
+            </p>
+
+            <div class="text-sm">
+              <h4 class="font-semibold mb-2 text-gray-900">Background</h4>
+              <ul class="text-gray-600 space-y-1">
+                <li>• Medical degree, Taiwan</li>
+                <li>• MSc in ocean medicine</li>
+                <li>• MSc Marketing (current), King's College London</li>
+                <li>• Clinical and healthcare research experience</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mt-16 bg-gray-50 rounded-lg p-8 text-center">
+        <h2 class="text-2xl font-semibold mb-4">Join Our Mission</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We're building a global network of collaborators, advisors, and production partners. 
+          If you're interested in advancing surgical training through medical 3D printing, 
+          we'd like to hear from you.
+        </p>
+      </section>
+    </main>
   </body>
 </html>
