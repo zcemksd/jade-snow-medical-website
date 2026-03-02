@@ -1,0 +1,44 @@
+---
+const { delay = 0 } = Astro.props;
+---
+
+<div class="scroll-reveal" data-delay={delay}>
+  <slot />
+</div>
+
+<style>
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const delay = entry.target.getAttribute('data-delay') || 0;
+          setTimeout(() => {
+            entry.target.classList.add('revealed');
+          }, Number(delay));
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    }
+  );
+
+  document.querySelectorAll('.scroll-reveal').forEach((el) => {
+    observer.observe(el);
+  });
+</script>

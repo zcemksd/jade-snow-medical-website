@@ -1,0 +1,54 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-white py-12 mt-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-8 mb-8">
+      
+      <!-- Company Info -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <img src="/jadesnow-logo.png" alt="Jade Snow Medical" class="h-8 w-auto brightness-0 invert" />
+          <span class="font-bold text-lg">JADESNOW MEDICAL</span>
+        </div>
+        <p class="text-gray-400 text-sm">
+          Patient-specific 3D printed anatomical models for neurosurgical training and pre-operative planning.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/products" class="text-gray-400 hover:text-white transition">Products</a></li>
+          <li><a href="/network" class="text-gray-400 hover:text-white transition">Network</a></li>
+          <li><a href="/clinical-use" class="text-gray-400 hover:text-white transition">Clinical Use</a></li>
+          <li><a href="/team" class="text-gray-400 hover:text-white transition">Team</a></li>
+          <li><a href="/faq" class="text-gray-400 hover:text-white transition">FAQs</a></li>
+          <li><a href="/contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li>Jade Snow Medical Ltd</li>
+          <li>London, United Kingdom</li>
+          <li class="mt-4">
+            <a href="mailto:danny.chen@jadesnowmedical.com" class="hover:text-white transition">
+              danny.chen@jadesnowmedical.com
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+      <p>&copy; {currentYear} Jade Snow Medical Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

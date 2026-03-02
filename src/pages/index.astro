@@ -1,5 +1,8 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import CircularGallery from "../components/CircularGallery.jsx";
+import ScrollReveal from "../components/ScrollReveal.astro";
 import "../styles/global.css";
 ---
 <html lang="en">
@@ -13,185 +16,510 @@ import "../styles/global.css";
     <Navbar />
     
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-white">
-      <div class="text-center max-w-4xl mx-auto px-6">
-        <h1 class="text-6xl font-bold text-gray-900 mb-6">
-          Save every life that can be saved.
-        </h1>
-        <p class="text-2xl text-gray-700 mb-8 font-medium">
-          Train better. Operate safer. Save more lives.
-        </p>
-        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Patient-specific 3D printed anatomical models for neurosurgical training 
-          and pre-operative planning. Realistic, repeatable, ethical.
-        </p>
-        <div class="flex gap-4 justify-center">
-          <a href="/products" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition font-medium">
-            Our Models
-          </a>
-          <a href="/clinical-use" class="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:border-gray-400 transition font-medium">
-            Clinical Use
-          </a>
-        </div>
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="/images/dicom_2.jpg" 
+          alt="3D medical imaging" 
+          class="w-full h-full object-cover opacity-50"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-white/80 via-white/70 to-white"></div>
       </div>
-    </section>
-
-    <!-- Credibility & Impact -->
-    <section class="py-16 bg-white border-y border-gray-200">
-      <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-center text-sm font-semibold text-gray-500 uppercase tracking-wide mb-12">
-          Trusted by clinicians worldwide
-        </h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div class="text-4xl font-bold text-blue-600 mb-2">10+</div>
-            <div class="text-sm text-gray-600">Training Courses</div>
-          </div>
-          <div>
-            <div class="text-4xl font-bold text-blue-600 mb-2">300+</div>
-            <div class="text-sm text-gray-600">Models Delivered</div>
-          </div>
-          <div>
-            <div class="text-4xl font-bold text-blue-600 mb-2">100+</div>
-            <div class="text-sm text-gray-600">Surgeons Trained</div>
-          </div>
-          <div>
-            <div class="text-4xl font-bold text-blue-600 mb-2">92%</div>
-            <div class="text-sm text-gray-600">Satisfaction Score</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mission & Vision -->
-    <section class="py-20 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-semibold text-gray-900 mb-4">
-            Advancing safer surgery for all
-          </h2>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-            We believe every surgeon should have access to realistic rehearsal tools, 
-            regardless of geography or resource constraints.
+      
+      <!-- Content -->
+      <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+        <ScrollReveal>
+          <h1 class="text-6xl font-bold text-gray-900 mb-6">
+            Save every life that can be saved.
+          </h1>
+          <p class="text-2xl text-gray-700 mb-8 font-medium">
+            Train better. Operate safer. Save more lives.
           </p>
-        </div>
+          <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Patient-specific 3D printed anatomical models for neurosurgical training 
+            and pre-operative planning. Realistic, repeatable, ethical.
+          </p>
+          <div class="flex gap-4 justify-center">
+            <a href="/products" class="bg-jade-500 text-white px-8 py-3 rounded-lg hover:bg-jade-600 transition font-medium">
+              Our Models
+            </a>
+            <a href="/clinical-use" class="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:border-gray-400 transition font-medium">
+              Clinical Use
+            </a>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
 
-        <div class="grid md:grid-cols-2 gap-12 mb-16">
-          <div>
-            <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
-            <p class="text-gray-700 leading-relaxed">
-              To transform surgical education and pre-operative planning by providing clinicians 
-              with patient-specific, lifelike anatomical models that bridge the gap between 
-              imaging and intervention.
+    <!-- How It Works -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <ScrollReveal>
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-semibold text-gray-900 mb-4">
+              How Does It Work?
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+              From patient scan to surgical rehearsal in 2-3 weeks
             </p>
           </div>
-          
-          <div>
-            <h3 class="text-2xl font-semibold mb-4">Our Vision</h3>
-            <p class="text-gray-700 leading-relaxed">
-              A world where surgical training is standardized, ethical, and universally accessible. 
-              Where every complex procedure is rehearsed before it is performed. Where patient 
-              outcomes improve through deliberate practice.
-            </p>
-          </div>
+        </ScrollReveal>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <ScrollReveal delay={100}>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-jade-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                1
+              </div>
+              <h3 class="font-semibold mb-2">Send Patient Scans</h3>
+              <p class="text-base text-gray-600">
+                Provide anonymized MRI/CT scans in DICOM format
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={200}>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-jade-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                2
+              </div>
+              <h3 class="font-semibold mb-2">We Create Your Model</h3>
+              <p class="text-base text-gray-600">
+                Our team processes the scan and develops a patient-specific replica
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={300}>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-jade-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                3
+              </div>
+              <h3 class="font-semibold mb-2">Practice the Procedure</h3>
+              <p class="text-base text-gray-600">
+                Surgeons rehearse using real surgical instruments on realistic anatomy
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={400}>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-jade-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                4
+              </div>
+              <h3 class="font-semibold mb-2">Operate with Confidence</h3>
+              <p class="text-base text-gray-600">
+                Enter the OR having already navigated the patient's unique anatomy
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white rounded-lg p-6 border border-gray-200">
-            <h4 class="text-lg font-semibold mb-3">Safer Surgery</h4>
-            <p class="text-gray-600 text-sm">
-              Reducing intraoperative surprises through pre-surgical rehearsal with 
+        <ScrollReveal delay={500}>
+          <div class="mt-16 bg-gradient-to-br from-jade-50 to-jade-100/50 rounded-lg p-8 border border-jade-200">
+            <div class="max-w-3xl mx-auto">
+              <h3 class="text-xl font-semibold mb-4 text-center">Why surgeons use our models</h3>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Complex neurosurgical procedures like skull base approaches, tumor resections, or vascular repairs, 
+                involve navigating millimeters from critical structures. Every patient's anatomy is different.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                Our models let surgeons identify challenges, plan their approach, and build muscle memory 
+                before the actual operation. It's like a flight simulator for surgery: practice the high-risk 
+                scenarios before lives are on the line.
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+
+    <!-- Clinical Impact - Combined Stats -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <ScrollReveal>
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-semibold text-gray-900 mb-4">
+              Clinical Education in Action
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our models support surgical training programmes worldwide. From single-day workshops 
+              to comprehensive fellowship curricula, we enable hands-on learning with realistic, 
               patient-specific anatomy.
             </p>
           </div>
+        </ScrollReveal>
+
+        <!-- Combined Stats Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           
-          <div class="bg-white rounded-lg p-6 border border-gray-200">
-            <h4 class="text-lg font-semibold mb-3">Training Equity</h4>
-            <p class="text-gray-600 text-sm">
-              Democratizing access to realistic surgical training globally, regardless 
-              of resource constraints.
-            </p>
-          </div>
+          <ScrollReveal delay={100}>
+            <div class="text-center group">
+              <div class="w-16 h-16 bg-jade-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-jade-100 transition">
+                <svg class="w-8 h-8 text-jade-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <div class="text-4xl font-bold text-jade-500 mb-2">10+</div>
+              <div class="text-base text-gray-600">Courses Delivered</div>
+            </div>
+          </ScrollReveal>
           
-          <div class="bg-white rounded-lg p-6 border border-gray-200">
-            <h4 class="text-lg font-semibold mb-3">Ethical Practice</h4>
-            <p class="text-gray-600 text-sm">
-              Providing sustainable, repeatable alternatives to cadaveric training.
-            </p>
-          </div>
+          <ScrollReveal delay={200}>
+            <div class="text-center group">
+              <div class="w-16 h-16 bg-jade-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-jade-100 transition">
+                <svg class="w-8 h-8 text-jade-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              </div>
+              <div class="text-4xl font-bold text-jade-500 mb-2">300+</div>
+              <div class="text-base text-gray-600">Models Delivered</div>
+            </div>
+          </ScrollReveal>
+          
+          <ScrollReveal delay={300}>
+            <div class="text-center group">
+              <div class="w-16 h-16 bg-jade-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-jade-100 transition">
+                <svg class="w-8 h-8 text-jade-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div class="text-4xl font-bold text-jade-500 mb-2">100+</div>
+              <div class="text-base text-gray-600">Surgeons Trained</div>
+            </div>
+          </ScrollReveal>
+          
+          <ScrollReveal delay={400}>
+            <div class="text-center group">
+              <div class="w-16 h-16 bg-jade-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-jade-100 transition">
+                <svg class="w-8 h-8 text-jade-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+              </div>
+              <div class="text-4xl font-bold text-jade-500 mb-2">92%</div>
+              <div class="text-base text-gray-600">Satisfaction Score</div>
+            </div>
+          </ScrollReveal>
+          
+        </div>
+
+        <!-- Circular Gallery -->
+        <div style="height: 600px; position: relative;">
+          <CircularGallery 
+            client:load
+            items={[
+              { image: '/images/drilling_base.jpg', text: 'Skull Base Training' },
+              { image: '/images/surgeon_planning.jpg', text: 'EVD Insertion' },
+              { image: '/images/evd.jpg', text: 'Craniotomy Practice' },
+              { image: '/images/surgeon_practicing_2.jpg', text: 'Temporal Bone' },
+              { image: '/images/surgeon_practicing.jpg', text: 'Foramen Magnum' },
+              { image: '/images/team.jpg', text: 'Team Training' }
+            ]}
+            bend={2}
+            textColor="#1f2937"
+            borderRadius={0.05}
+            scrollSpeed={2}
+            scrollEase={0.05}
+          />
         </div>
       </div>
     </section>
 
-    <!-- Image Gallery Section - Placeholder for your training photos -->
-    <section class="py-20 bg-white">
+    <!-- Partners & Supporters -->
+    <section class="py-20 bg-gray-900">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold text-center mb-12">
-          Clinical Education in Action
-        </h2>
-        <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-          Our models support surgical training programs worldwide. From single-day workshops 
-          to comprehensive fellowship curricula, we enable hands-on learning with realistic, 
-          patient-specific anatomy.
-        </p>
+        <ScrollReveal>
+          <h2 class="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-16">
+            Supported by leading institutions
+          </h2>
+        </ScrollReveal>
+          <div class="flex flex-wrap justify-center items-center gap-x-16 gap-y-12">
+        
+          
+          <!-- UCL Hatchery -->
+          <ScrollReveal delay={100}>
+            <div class="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity duration-300">
+              <img 
+                src="/images/ucl-hatchery.png" 
+                alt="UCL Hatchery" 
+                class="max-h-full max-w-full object-contain filter brightness-0 invert"
+              />
+            </div>
+          </ScrollReveal>
 
-        <!-- Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 text-center">
-          <div>
-            <div class="text-3xl font-bold text-blue-600 mb-2">10+</div>
-            <div class="text-sm text-gray-600">Courses Delivered</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-blue-600 mb-2">100+</div>
-            <div class="text-sm text-gray-600">Surgeons Trained</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-blue-600 mb-2">9+/10</div>
-            <div class="text-sm text-gray-600">Usability Score</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-blue-600 mb-2">3</div>
-            <div class="text-sm text-gray-600">Countries</div>
-          </div>
+          <!-- Accelerate Cambridge -->
+          <ScrollReveal delay={200}>
+            <div class="flex items-center justify-center h-16 w-40 opacity-80 hover:opacity-100 transition-opacity duration-300">
+              <img 
+                src="/images/cjbs_logo_2.png" 
+                alt="Accelerate Cambridge Judge Business School" 
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+          </ScrollReveal>
+
+          <!-- UCLH -->
+          <ScrollReveal delay={300}>
+            <div class="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity duration-300">
+              <img 
+                src="/images/uclh_logo.png" 
+                alt="University College London Hospitals" 
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+          </ScrollReveal>
+
+          <!-- NHNN -->
+          <ScrollReveal delay={400}>
+            <div class="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity duration-300">
+              <img 
+                src="/images/nhnn_logo.png" 
+                alt="National Hospital for Neurology and Neurosurgery" 
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+          </ScrollReveal>
+
+          <!-- GOSH -->
+          <ScrollReveal delay={500}>
+            <div class="flex items-center justify-center h-16 w-40 opacity-80 hover:opacity-100 transition-opacity duration-300">
+              <img 
+                src="/images/gosh_logo.png" 
+                alt="Great Ormond Street Hospital" 
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+          </ScrollReveal>
+
+          <!-- Wellcome EPSRC -->
+          <ScrollReveal delay={600}>
+            <div class="flex items-center justify-center h-16 w-48 opacity-80 hover:opacity-100 transition-opacity duration-300">
+              <img 
+                src="/images/weiss_logo.png" 
+                alt="Wellcome EPSRC Centre for Interventional and Surgical Sciences" 
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+          </ScrollReveal>
+
+          <!-- Royal Free -->
+          <ScrollReveal delay={700}>
+            <div class="flex items-center justify-center h-16 w-40 opacity-80 hover:opacity-100 transition-opacity duration-300">
+              <img 
+                src="/images/royal_free_logo.png" 
+                alt="Royal Free London" 
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+          </ScrollReveal>
+
+          <!-- Addis Ababa University -->
+          <ScrollReveal delay={800}>
+            <div class="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity duration-300">
+              <img 
+                src="/images/addis_ababa_logo.png" 
+                alt="Addis Ababa University" 
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+          </ScrollReveal>
+
+          <!-- SELF -->
+          <ScrollReveal delay={900}>
+            <div class="flex items-center justify-center h-16 w-40 opacity-80 hover:opacity-100 transition-opacity duration-300">
+              <img 
+                src="/images/self_logo.png" 
+                alt="Surgical Education Learners Forum" 
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+          </ScrollReveal>
+
+          <!-- Centre for Global Equality -->
+          <ScrollReveal delay={1000}>
+            <div class="flex items-center justify-center h-16 w-40 opacity-80 hover:opacity-100 transition-opacity duration-300">
+              <img 
+                src="/images/global_equality_logo.png" 
+                alt="Centre for Global Equality" 
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+          </ScrollReveal>
+
         </div>
+      </div>
+    </section>
 
-        <!-- Image Grid - Placeholder for real training photos -->
+    <!-- Use Cases -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <ScrollReveal>
+          <h2 class="text-4xl font-semibold text-center mb-12">Who uses our models</h2>
+        </ScrollReveal>
+        <div class="grid md:grid-cols-3 gap-8">
+          
+         <ScrollReveal delay={100}> 
+          <div class="bg-white rounded-lg p-6 hover:shadow-lg transition">
+            <div class="w-12 h-12 bg-jade-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-jade-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Teaching Hospitals</h3>
+            <p class="text-gray-600 text-base">
+              Train residents on realistic anatomy without relying on scarce cadaver access
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={200}>
+          <div class="bg-white rounded-lg p-6 hover:shadow-lg transition">
+            <div class="w-12 h-12 bg-jade-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-jade-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Consultant Surgeons</h3>
+            <p class="text-gray-600 text-base">
+              Plan complex cases and rehearse patient-specific approaches before surgery
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={300}>
+          <div class="bg-white rounded-lg p-6 hover:shadow-lg transition">
+            <div class="w-12 h-12 bg-jade-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-jade-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Research Teams</h3>
+            <p class="text-gray-600 text-base">
+              Validate new surgical techniques and medical devices on realistic models
+            </p>
+          </div>
+        </ScrollReveal>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Cards -->
+    <div class="grid md:grid-cols-2 gap-12 mb-16">
+      
+      <!-- Mission -->
+      <ScrollReveal delay={100}>
+        <div class="relative bg-gradient-to-br from-jade-50 to-white rounded-2xl p-8 border border-jade-100 flex flex-col h-full">
+          <div class="absolute -top-6 left-8 w-12 h-12 bg-jade-500 rounded-xl flex items-center justify-center shadow-lg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4 mt-4">Our Mission</h3>
+          <p class="text-gray-700 leading-relaxed flex-1">
+            To transform surgical education and pre-operative planning by providing clinicians 
+            with patient-specific, lifelike anatomical models that bridge the gap between 
+            imaging and intervention.
+          </p>
+        </div>
+      </ScrollReveal>
+
+      <!-- Vision -->
+      <ScrollReveal delay={200}>
+        <div class="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white flex flex-col h-full">
+          <div class="absolute -top-6 left-8 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
+            <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4 mt-4">Our Vision</h3>
+          <p class="text-gray-100 leading-relaxed flex-1">
+            A world where surgical training is standardized, ethical, and universally accessible. 
+            Where every complex procedure is rehearsed before it is performed. Where patient 
+            outcomes improve through deliberate practice.
+          </p>
+        </div>
+      </ScrollReveal>
+
+    </div>
+        <!-- Three Core Values - More Visual -->
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">Training photo 1</span>
-          </div>
-          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">Training photo 2</span>
-          </div>
-          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">Training photo 3</span>
-          </div>
-          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">Training photo 4</span>
-          </div>
-          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">Training photo 5</span>
-          </div>
-          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">Training photo 6</span>
-          </div>
+          
+          <ScrollReveal delay={300}>
+            <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200 p-6 hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-jade-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+              <div class="relative flex-1">
+                <div class="w-14 h-14 bg-jade-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h4 class="text-xl font-semibold mb-3">Safer Surgery</h4>
+                <p class="text-gray-600 text-base leading-relaxed">
+                  Reducing intraoperative surprises through pre-surgical rehearsal with 
+                  patient-specific anatomy. Every procedure planned, every risk identified.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+          
+          <ScrollReveal delay={400}>
+            <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200 p-6 hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-jade-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+              <div class="relative flex-1">
+                <div class="w-14 h-14 bg-jade-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 class="text-xl font-semibold mb-3">Training Equity</h4>
+                <p class="text-gray-600 text-base leading-relaxed">
+                  Democratizing access to realistic surgical training globally, regardless 
+                  of geography or resource constraints. World-class training, everywhere.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={500}>
+            <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200 p-6 hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-jade-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+              <div class="relative flex-1">
+                <div class="w-14 h-14 bg-jade-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
+                <h4 class="text-xl font-semibold mb-3">Ethical Practice</h4>
+                <p class="text-gray-600 text-base leading-relaxed">
+                  Providing sustainable, repeatable alternatives to cadaveric training. 
+                  Respectful of donors, accessible to learners.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+
         </div>
+
       </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="py-20 bg-blue-600 text-white">
+    <section class="py-20 bg-jade-500 text-white">
       <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-semibold mb-4">
+        <h2 class="text-4xl font-semibold mb-4">
           Ready to transform surgical training?
         </h2>
-        <p class="text-lg mb-8 text-blue-100">
+        <p class="text-xl mb-8 text-jade-100">
           Partner with us to bring realistic, patient-specific training models to your institution.
         </p>
-        <a href="/contact" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-medium">
+        <a href="/contact" class="inline-block bg-white text-jade-500 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-medium">
           Get in Touch
         </a>
       </div>
     </section>
+    <Footer />
   </body>
 </html>

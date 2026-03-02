@@ -1,3 +1,31 @@
+/* Better base typography */
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Smoother text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Add subtle shadow to navbar when page is scrolled */
+.sticky {
+  transition: box-shadow 0.2s ease;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

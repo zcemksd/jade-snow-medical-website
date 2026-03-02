@@ -1,5 +1,8 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import DualMarqueeGallery from "../components/DualMarqueeGallery.jsx";
+import ScrollReveal from "../components/ScrollReveal.astro";
 import "../styles/global.css";
 ---
 <html lang="en">
@@ -13,166 +16,256 @@ import "../styles/global.css";
     
     <main class="max-w-7xl mx-auto px-6 py-16">
       <section class="text-center mb-16">
-        <h1 class="text-4xl font-semibold text-gray-900 mb-4">
-          Clinical Education in Action
-        </h1>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-          Our models support neurosurgical training programmes at leading institutions worldwide. 
-          From single-day workshops to comprehensive fellowship curricula, we enable hands-on 
-          learning with realistic, patient-specific anatomy.
-        </p>
+        <ScrollReveal>
+          <h1 class="text-4xl font-semibold text-gray-900 mb-4">
+            Clinical Education in Action
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Our models support neurosurgical training programs at leading institutions worldwide. 
+            From single-day workshops to comprehensive fellowship curricula, we enable hands-on 
+            learning with realistic, patient-specific anatomy.
+          </p>
+        </ScrollReveal>
       </section>
 
       <!-- Featured Partner -->
-      <section class="mb-16 bg-blue-50 rounded-lg p-8">
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h2 class="text-2xl font-semibold mb-4">
-              National Hospital for Neurology and Neurosurgery
-            </h2>
-            <p class="text-gray-700 mb-4">
-              Queen Square, London — University College London Hospitals NHS Foundation Trust
-            </p>
-            <p class="text-gray-600 mb-6">
-              Our flagship partnership. Since 2023, we have delivered over 300 patient-specific 
-              models supporting 10+ neurosurgical training courses, reaching 100+ surgeons in 
-              training across multiple subspecialties.
-            </p>
-            <div class="grid grid-cols-2 gap-4 text-sm">
-              <div>
-                <div class="text-2xl font-bold text-blue-600 mb-1">92%</div>
-                <div class="text-gray-600">Satisfaction Score</div>
-              </div>
-              <div>
-                <div class="text-2xl font-bold text-blue-600 mb-1">9+/10</div>
-                <div class="text-gray-600">Usability Rating</div>
+      <section class="mb-16 bg-jade-50 rounded-lg p-8">
+        <ScrollReveal>
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 class="text-2xl font-semibold mb-4">
+                National Hospital for Neurology and Neurosurgery
+              </h2>
+              <p class="text-gray-700 mb-4">
+                Queen Square, London — University College London Hospitals NHS Foundation Trust
+              </p>
+              <p class="text-gray-600 mb-6">
+                Our flagship partnership. Since 2023, we have delivered over 300 patient-specific 
+                models supporting 10+ neurosurgical training courses, reaching 100+ surgeons in 
+                training across multiple subspecialties.
+              </p>
+              <div class="grid grid-cols-2 gap-4 text-base">
+                <div>
+                  <div class="text-2xl font-bold text-jade-500 mb-1">92%</div>
+                  <div class="text-gray-600">Satisfaction Score</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold text-jade-500 mb-1">9+/10</div>
+                  <div class="text-gray-600">Usability Rating</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">NHNN/UCLH photo</span>
-          </div>
+            <div class="h-64 overflow-hidden rounded-lg">
+              <img 
+                src="/images/nhnn_team.JPG" 
+                alt="National Hospital for Neurology and Neurosurgery training course" 
+                class="w-full h-full object-cover object-center"
+                style="object-position: 50% 40%;"
+              />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      <!-- Course History Table -->
+      <!-- Impact Metrics -->
       <section class="mb-16">
-        <h2 class="text-2xl font-semibold mb-8 text-center">Training Courses Delivered</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full border border-gray-200 rounded-lg">
-            <thead class="bg-gray-50">
-              <tr>
-                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700">Date</th>
-                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700">Training Course</th>
-                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700">Model Quantity</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200">
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">Jun. 2023</td>
-                <td class="px-6 py-4 text-sm text-gray-900">Skull Base Training</td>
-                <td class="px-6 py-4 text-sm text-gray-600">33</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2023</td>
-                <td class="px-6 py-4 text-sm text-gray-900">EVD Insertion</td>
-                <td class="px-6 py-4 text-sm text-gray-600">10</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2023</td>
-                <td class="px-6 py-4 text-sm text-gray-900">Skull Base Training</td>
-                <td class="px-6 py-4 text-sm text-gray-600">10</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2023</td>
-                <td class="px-6 py-4 text-sm text-gray-900">Foramen Magnum Decompression</td>
-                <td class="px-6 py-4 text-sm text-gray-600">20</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2023</td>
-                <td class="px-6 py-4 text-sm text-gray-900">Lumbar Puncture</td>
-                <td class="px-6 py-4 text-sm text-gray-600">3</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">Feb. 2024</td>
-                <td class="px-6 py-4 text-sm text-gray-900">Temporal Bone Training</td>
-                <td class="px-6 py-4 text-sm text-gray-600">60</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2024</td>
-                <td class="px-6 py-4 text-sm text-gray-900">Burr Hole / Craniotomy / Craniectomy</td>
-                <td class="px-6 py-4 text-sm text-gray-600">12</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">Mar. 2025</td>
-                <td class="px-6 py-4 text-sm text-gray-900">Lateral Skull Base Approaches</td>
-                <td class="px-6 py-4 text-sm text-gray-600">60</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">Apr. 2025</td>
-                <td class="px-6 py-4 text-sm text-gray-900">Foramen Magnum Decompression</td>
-                <td class="px-6 py-4 text-sm text-gray-600">20</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">May. 2025</td>
-                <td class="px-6 py-4 text-sm text-gray-900">Neural Canal (Research)</td>
-                <td class="px-6 py-4 text-sm text-gray-600">110</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">Oct. 2025</td>
-                <td class="px-6 py-4 text-sm text-gray-900">Functional Neurosurgery</td>
-                <td class="px-6 py-4 text-sm text-gray-600">2</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2025</td>
-                <td class="px-6 py-4 text-sm text-gray-900">Drills & Skills Course</td>
-                <td class="px-6 py-4 text-sm text-gray-600">12</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-sm text-gray-600">Nov. 2025</td>
-                <td class="px-6 py-4 text-sm text-gray-900">Pituitary Surgery</td>
-                <td class="px-6 py-4 text-sm text-gray-600">22</td>
-              </tr>
-            </tbody>
-          </table>
+        <ScrollReveal>
+          <h2 class="text-2xl font-semibold mb-8 text-center">Training Impact</h2>
+        </ScrollReveal>
+        <div class="grid md:grid-cols-2 gap-8">
+          
+          <ScrollReveal delay={200}>
+            <div class="bg-jade-50 rounded-lg p-8 h-full">
+              <h3 class="text-xl font-semibold mb-6">Course Types Supported</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start gap-3">
+                  <span class="text-jade-500 font-bold">•</span>
+                  <span>Skull Base Approaches & Techniques</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-jade-500 font-bold">•</span>
+                  <span>Emergency Neurosurgical Procedures (EVD, Burr Holes)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-jade-500 font-bold">•</span>
+                  <span>Craniotomy & Craniectomy Training</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-jade-500 font-bold">•</span>
+                  <span>Foramen Magnum Decompression</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-jade-500 font-bold">•</span>
+                  <span>Temporal Bone & Lateral Skull Base</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-jade-500 font-bold">•</span>
+                  <span>Pituitary & Functional Neurosurgery</span>
+                </li>
+              </ul>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={400}>
+            <div class="bg-gray-50 rounded-lg p-8 h-full">
+              <h3 class="text-xl font-semibold mb-6">Who We've Worked With</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start gap-3">
+                  <span class="text-jade-500 font-bold">•</span>
+                  <span>Neurosurgical residency programmes</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-jade-500 font-bold">•</span>
+                  <span>Fellowship training courses</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-jade-500 font-bold">•</span>
+                  <span>Consultant-level skills development</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-jade-500 font-bold">•</span>
+                  <span>Academic surgical research projects</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-jade-500 font-bold">•</span>
+                  <span>Medical device validation studies</span>
+                </li>
+              </ul>
+            </div>
+          </ScrollReveal>
+
         </div>
       </section>
 
-      <!-- Image Gallery Placeholder -->
+      <!-- Testimonials / Feedback -->
       <section class="mb-16">
-        <h2 class="text-2xl font-semibold mb-8 text-center">Training in Action</h2>
+        <ScrollReveal>
+          <h2 class="text-2xl font-semibold mb-8 text-center">What Surgeons Say</h2>
+        </ScrollReveal>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          
+          <ScrollReveal delay={200}>
+            <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col h-full">
+              <div class="text-4xl text-jade-500 mb-3">"</div>
+              <p class="text-gray-700 italic mb-4 flex-1">
+                Using 3D printed brain models were very helpful to understand and get better in the skills. 
+                Great work! Accurate skull modelling, would be happy to use in the future.
+              </p>
+              <p class="text-base text-gray-500">— Neurosurgical Trainee, NHNN Drilling Course</p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={400}>
+            <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col h-full">
+              <div class="text-4xl text-jade-500 mb-3">"</div>
+              <p class="text-gray-700 italic mb-4 flex-1">
+                Skull itself was very realistic in shape. Drilling texture and resistance felt quite true to real life. 
+                Useful for finding landmarks and getting the sensation of drilling.
+              </p>
+              <p class="text-base text-gray-500">— Doctor, UCLH Training Programme</p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={600}>
+            <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col h-full">
+              <div class="text-4xl text-jade-500 mb-3">"</div>
+              <p class="text-gray-700 italic mb-4 flex-1">
+                Overall they were of a very high quality. The simulation was a very valuable training ground, 
+                allowing to develop and refine skills in a controlled environment.
+              </p>
+              <p class="text-base text-gray-500">— FY1 Doctor, Surgical Skills Course</p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={800}>
+            <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col h-full">
+              <div class="text-4xl text-jade-500 mb-3">"</div>
+              <p class="text-gray-700 italic mb-4 flex-1">
+                Fine details such as sutures and foramina were accurately represented. 
+                The setup was overall user-friendly and easy to set up with clear instructions.
+              </p>
+              <p class="text-base text-gray-500">— Surgical Trainee, NHNN</p>
+            </div>
+          </ScrollReveal>
+
+        </div>
+      </section>
+
+      <!-- Selected Course Highlights -->
+      <section class="mb-16">
+        <ScrollReveal>
+          <h2 class="text-2xl font-semibold mb-8 text-center">Selected Course Highlights</h2>
+        </ScrollReveal>
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">Course photo 1</span>
-          </div>
-          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">Course photo 2</span>
-          </div>
-          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">Course photo 3</span>
-          </div>
-          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">Course photo 4</span>
-          </div>
-          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">Course photo 5</span>
-          </div>
-          <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400">Course photo 6</span>
-          </div>
+          
+          <ScrollReveal delay={200}>
+            <div class="border border-gray-200 rounded-lg p-6 flex flex-col h-full">
+              <div class="text-jade-500 font-bold mb-2">2023-2025</div>
+              <h3 class="font-semibold mb-2">UCLH Neurosurgery Program</h3>
+              <p class="text-base text-gray-600 flex-1">
+                Ongoing partnership supporting multiple training courses annually including skull base, EVD, and craniotomy training.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={400}>
+            <div class="border border-gray-200 rounded-lg p-6 flex flex-col h-full">
+              <div class="text-jade-500 font-bold mb-2">2024</div>
+              <h3 class="font-semibold mb-2">Temporal Bone Course</h3>
+              <p class="text-base text-gray-600 flex-1">
+                60 high-fidelity temporal bone models delivered for lateral skull base approach training.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={600}>
+            <div class="border border-gray-200 rounded-lg p-6 flex flex-col h-full">
+              <div class="text-jade-500 font-bold mb-2">2025</div>
+              <h3 class="font-semibold mb-2">Neural Canal Research</h3>
+              <p class="text-base text-gray-600 flex-1">
+                110 specialized models produced for academic research collaboration on surgical technique development.
+              </p>
+            </div>
+          </ScrollReveal>
+
         </div>
+      </section>
+
+      <!-- Training Photos Gallery -->
+      <section class="mb-16">
+        <ScrollReveal>
+          <h2 class="text-2xl font-semibold mb-8 text-center">Training in Action</h2>
+        </ScrollReveal>
+        
+        <DualMarqueeGallery 
+          client:load
+          topImages={[
+            '/images/drilling_2.jpg',
+            '/images/drilling.jpg',
+            '/images/fmd.jpg',
+            '/images/drilling_training.jpg'
+          ]}
+          bottomImages={[
+            '/images/dura.jpg',
+            '/images/fmd_train.JPG',
+            '/images/skull_base.jpg',
+            '/images/nhnn_team.JPG'
+          ]}
+        />
       </section>
 
       <section class="bg-gray-50 rounded-lg p-8 text-center">
         <h2 class="text-2xl font-semibold mb-4">Bring Jade Snow Medical to Your Institution</h2>
         <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-          We partner with hospitals and training programmes worldwide. Contact us to discuss 
+          We partner with hospitals and training programs worldwide. Contact us to discuss 
           how our models can enhance your surgical education curriculum.
         </p>
-        <a href="/contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
+        <a href="/contact" class="inline-block bg-jade-500 text-white px-8 py-3 rounded-lg hover:bg-jade-600 transition">
           Get in Touch
         </a>
       </section>
     </main>
+    <Footer />
   </body>
 </html>

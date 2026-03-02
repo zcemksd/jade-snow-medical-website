@@ -1,22 +1,68 @@
 ---
+const currentPath = Astro.url.pathname;
+
+// Helper function to check if link is active
+const isActive = (path: string) => {
+  if (path === '/' && currentPath === '/') return true;
+  if (path !== '/' && currentPath.startsWith(path)) return true;
+  return false;
+};
 ---
-<nav class="border-b bg-white">
-  <div class="max-w-7xl mx-auto px-6 py-4">
+
+<nav class="sticky top-0 z-50 border-b bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-5">
     <div class="flex items-center justify-between">
-      <!-- Logo - left side, bigger -->
+      <!-- Logo - left side -->
       <a href="/" class="flex items-center gap-3">
-        <img src="/jadesnow-logo.png" alt="Jade Snow Medical" class="h-10 w-auto" />
-        <span class="text-xl font-semibold text-gray-900">Jade Snow Medical</span>
+        <img src="/jadesnow-logo.png" alt="Jade Snow Medical" class="h-11 w-auto" />
+        <div class="flex flex-col leading-none">
+          <span class="text-2xl font-black tracking-tight text-gray-900" style="font-family: 'Arial Black', 'Helvetica', sans-serif;">
+            JADESNOW
+          </span>
+          <span class="text-xs font-semibold tracking-wider text-gray-600 mt-0.5" style="letter-spacing: 0.15em;">
+            MEDICAL
+          </span>
+        </div>
       </a>
       
       <!-- Nav links - right side -->
-      <div class="flex items-center gap-8 text-sm">
-        <a href="/products" class="text-gray-700 hover:text-blue-600 transition">Products</a>
-        <a href="/network" class="text-gray-700 hover:text-blue-600 transition">Network</a>
-        <a href="/clinical-use" class="text-gray-700 hover:text-blue-600 transition">Clinical Use</a>
-        <a href="/team" class="text-gray-700 hover:text-blue-600 transition">Team</a>
-        <a href="/faq" class="text-gray-700 hover:text-blue-600 transition">FAQs</a>
-        <a href="/contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+      <div class="flex items-center gap-8 text-base">
+        <a 
+          href="/products" 
+          class={`transition ${isActive('/products') ? 'text-jade-500 font-semibold border-b-2 border-jade-500' : 'text-gray-700 hover:text-jade-500'}`}
+        >
+          Products
+        </a>
+        <a 
+          href="/network" 
+          class={`transition ${isActive('/network') ? 'text-jade-500 font-semibold border-b-2 border-jade-500' : 'text-gray-700 hover:text-jade-500'}`}
+        >
+          Network
+        </a>
+        <a 
+          href="/clinical-use" 
+          class={`transition ${isActive('/clinical-use') ? 'text-jade-500 font-semibold border-b-2 border-jade-500' : 'text-gray-700 hover:text-jade-500'}`}
+        >
+          Clinical Use
+        </a>
+        <a 
+          href="/team" 
+          class={`transition ${isActive('/team') ? 'text-jade-500 font-semibold border-b-2 border-jade-500' : 'text-gray-700 hover:text-jade-500'}`}
+        >
+          Team
+        </a>
+        <a 
+          href="/faq" 
+          class={`transition ${isActive('/faq') ? 'text-jade-500 font-semibold border-b-2 border-jade-500' : 'text-gray-700 hover:text-jade-500'}`}
+        >
+          FAQs
+        </a>
+        <a 
+          href="/contact" 
+          class={`transition ${isActive('/contact') ? 'text-jade-500 font-semibold border-b-2 border-jade-500' : 'text-gray-700 hover:text-jade-500'}`}
+        >
+          Contact
+        </a>
       </div>
     </div>
   </div>
