@@ -1,69 +1,95 @@
 ---
 const currentPath = Astro.url.pathname;
 
-// Helper function to check if link is active
-const isActive = (path: string) => {
-  if (path === '/' && currentPath === '/') return true;
-  if (path !== '/' && currentPath.startsWith(path)) return true;
-  return false;
-};
+const navLinks = [
+  { href: "/products", label: "Products" },
+  { href: "/network", label: "Network" },
+  { href: "/clinical-use", label: "Clinical Use" },
+  { href: "/team", label: "Team" },
+  { href: "/faq", label: "FAQs" },
+  { href: "/contact", label: "Contact" }
+];
 ---
 
 <nav class="sticky top-0 z-50 border-b bg-white shadow-sm">
-  <div class="max-w-7xl mx-auto px-6 py-5">
-    <div class="flex items-center justify-between">
-      <!-- Logo - left side -->
-      <a href="/" class="flex items-center gap-3">
-        <img src="/jadesnow-logo.png" alt="Jade Snow Medical" class="h-11 w-auto" />
-        <div class="flex flex-col leading-none">
-          <span class="text-2xl font-black tracking-tight text-gray-900" style="font-family: 'Arial Black', 'Helvetica', sans-serif;">
-            JADESNOW
-          </span>
-          <span class="text-xs font-semibold tracking-wider text-gray-600 mt-0.5" style="letter-spacing: 0.15em;">
-            MEDICAL
-          </span>
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-center h-16">
+      
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 hover:opacity-80 transition">
+        <img src="/jadesnow-logo.png" alt="Jade Snow Medical" class="h-11" />
+        <div class="flex flex-col leading-tight">
+          <span class="text-2xl font-black tracking-tight">JADESNOW</span>
+          <span class="text-xs tracking-widest font-medium text-gray-600">MEDICAL</span>
         </div>
       </a>
-      
-      <!-- Nav links - right side -->
-      <div class="flex items-center gap-8 text-base">
-        <a 
-          href="/products" 
-          class={`transition ${isActive('/products') ? 'text-jade-500 font-semibold border-b-2 border-jade-500' : 'text-gray-700 hover:text-jade-500'}`}
-        >
-          Products
-        </a>
-        <a 
-          href="/network" 
-          class={`transition ${isActive('/network') ? 'text-jade-500 font-semibold border-b-2 border-jade-500' : 'text-gray-700 hover:text-jade-500'}`}
-        >
-          Network
-        </a>
-        <a 
-          href="/clinical-use" 
-          class={`transition ${isActive('/clinical-use') ? 'text-jade-500 font-semibold border-b-2 border-jade-500' : 'text-gray-700 hover:text-jade-500'}`}
-        >
-          Clinical Use
-        </a>
-        <a 
-          href="/team" 
-          class={`transition ${isActive('/team') ? 'text-jade-500 font-semibold border-b-2 border-jade-500' : 'text-gray-700 hover:text-jade-500'}`}
-        >
-          Team
-        </a>
-        <a 
-          href="/faq" 
-          class={`transition ${isActive('/faq') ? 'text-jade-500 font-semibold border-b-2 border-jade-500' : 'text-gray-700 hover:text-jade-500'}`}
-        >
-          FAQs
-        </a>
-        <a 
-          href="/contact" 
-          class={`transition ${isActive('/contact') ? 'text-jade-500 font-semibold border-b-2 border-jade-500' : 'text-gray-700 hover:text-jade-500'}`}
-        >
-          Contact
-        </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-8">
+        {navLinks.map(link => (
+          <a 
+            href={link.href}
+            class={`text-base transition-colors border-b-2 pb-1 ${
+              currentPath === link.href 
+                ? 'text-jade-500 font-semibold border-jade-500' 
+                : 'text-gray-700 hover:text-jade-500 border-transparent'
+            }`}
+          >
+            {link.label}
+          </a>
+        ))}
       </div>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-button"
+        class="md:hidden p-2 text-gray-700 hover:text-jade-500 transition"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
     </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      {navLinks.map(link => (
+        <a 
+          href={link.href}
+          class={`block py-3 px-4 text-base transition-colors border-l-4 ${
+            currentPath === link.href 
+              ? 'text-jade-500 font-semibold border-jade-500 bg-jade-50' 
+              : 'text-gray-700 hover:text-jade-500 hover:bg-gray-50 border-transparent'
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+
   </div>
 </nav>
+
+<script>
+  // Mobile menu toggle
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      
+      // Change icon
+      const svg = menuButton.querySelector('svg');
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      
+      if (isOpen) {
+        svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+      } else {
+        svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+      }
+    });
+  }
+</script>

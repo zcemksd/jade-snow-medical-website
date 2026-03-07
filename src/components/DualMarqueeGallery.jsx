@@ -21,7 +21,7 @@ export default function DualMarqueeGallery({ topImages, bottomImages }) {
 
     let topPosition = 0;
     let bottomPosition = -(bottomRow.scrollWidth / 2); // Start from negative
-    const speed = 0.5;
+    const speed = 0.2;
 
     function animate() {
       if (!pausedRef.current) {

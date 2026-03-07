@@ -150,7 +150,6 @@ class Media {
         void main() {
           vUv = uv;
           vec3 p = position;
-          p.z = (sin(p.x * 4.0 + uTime) * 1.5 + cos(p.y * 2.0 + uTime) * 1.5) * (0.1 + uSpeed * 0.5);
           gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
         }
       `,
@@ -250,8 +249,8 @@ class Media {
     }
 
     this.speed = scroll.current - scroll.last;
-    this.program.uniforms.uTime.value += 0.04;
-    this.program.uniforms.uSpeed.value = this.speed;
+    // this.program.uniforms.uTime.value += 0.04;
+    // this.program.uniforms.uSpeed.value = this.speed;
 
     const planeOffset = this.plane.scale.x / 2;
     const viewportOffset = this.viewport.width / 2;
@@ -525,11 +524,13 @@ export default function CircularGallery({
   scrollEase = 0.05
 }) {
   const containerRef = useRef(null);
+  const appRef = useRef(null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState('');
   
   useEffect(() => {
     const app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase });
+    appRef.current = app;
     
     app.setImageClickHandler((imagePath) => {
       setLightboxImage(imagePath);
@@ -540,10 +541,43 @@ export default function CircularGallery({
       app.destroy();
     };
   }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
+
+  const scrollLeft = () => {
+    if (appRef.current && appRef.current.medias && appRef.current.medias[0]) {
+      const width = appRef.current.medias[0].width;
+      appRef.current.scroll.target += width;
+    }
+  };
+
+  const scrollRight = () => {
+    if (appRef.current && appRef.current.medias && appRef.current.medias[0]) {
+      const width = appRef.current.medias[0].width;
+      appRef.current.scroll.target -= width;
+    }
+  };
   
   return (
     <>
-      <div className="circular-gallery" ref={containerRef} />
+      <div className="circular-gallery-wrapper">
+        <div className="circular-gallery" ref={containerRef} />
+        
+        <button 
+          onClick={scrollLeft}
+          className="carousel-arrow-btn carousel-arrow-left"
+          aria-label="Previous image"
+        >
+          ‹
+        </button>
+        
+        <button 
+          onClick={scrollRight}
+          className="carousel-arrow-btn carousel-arrow-right"
+          aria-label="Next image"
+        >
+          ›
+        </button>
+      </div>
+      
       <Lightbox 
         isOpen={lightboxOpen}
         imageSrc={lightboxImage}

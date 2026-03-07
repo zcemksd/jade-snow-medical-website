@@ -7,6 +7,7 @@ import "../styles/global.css";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/jadesnow-logo.png" />
     <meta name="viewport" content="width=device-width" />
     <title>Products - Jade Snow Medical</title>
   </head>
@@ -35,17 +36,17 @@ import "../styles/global.css";
           
           <!-- Foramen Magnum Model -->
           <ScrollReveal delay={200}>
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <div class="h-64 overflow-hidden">
+            <div class="border border-gray-200 rounded-lg overflow-hidden h-full flex flex-col">
+              <div class="h-64 overflow-hidden flex-shrink-0">
                 <img 
                   src="/images/fmd.jpg" 
                   alt="Foramen Magnum Decompression Model" 
                   class="w-full h-full object-cover"
                 />
               </div>
-              <div class="p-6">
+              <div class="p-6 flex-1 flex flex-col">
                 <h3 class="text-xl font-semibold mb-3">Foramen Magnum Decompression Model</h3>
-                <p class="text-gray-600 text-base mb-4">
+                <p class="text-gray-600 text-base mb-4 flex-1">
                   Anatomically accurate posterior fossa model for practicing foramen magnum 
                   decompression procedures. Includes occipital bone, C1 vertebra, and relevant 
                   anatomical landmarks.
@@ -59,17 +60,17 @@ import "../styles/global.css";
 
           <!-- EVD Model -->
           <ScrollReveal delay={400}>
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <div class="h-64 overflow-hidden">
+            <div class="border border-gray-200 rounded-lg overflow-hidden h-full flex flex-col">
+              <div class="h-64 overflow-hidden flex-shrink-0">
                 <img 
                   src="/images/evd.jpg" 
                   alt="External Ventricular Drain Model" 
                   class="w-full h-full object-cover"
                 />
               </div>
-              <div class="p-6">
+              <div class="p-6 flex-1 flex flex-col">
                 <h3 class="text-xl font-semibold mb-3">External Ventricular Drain (EVD) Model</h3>
-                <p class="text-gray-600 text-base mb-4">
+                <p class="text-gray-600 text-base mb-4 flex-1">
                   Realistic model for practicing EVD insertion technique. Features accurate 
                   ventricular anatomy and surface landmarks for safe catheter placement.
                 </p>
@@ -82,17 +83,17 @@ import "../styles/global.css";
 
           <!-- Cranial Drilling Model -->
           <ScrollReveal delay={600}>
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <div class="h-64 overflow-hidden">
+            <div class="border border-gray-200 rounded-lg overflow-hidden h-full flex flex-col">
+              <div class="h-64 overflow-hidden flex-shrink-0">
                 <img 
                   src="/images/cranial_drilling.jpeg" 
                   alt="Cranial Drilling Practice Model" 
                   class="w-full h-full object-cover"
                 />
               </div>
-              <div class="p-6">
+              <div class="p-6 flex-1 flex flex-col">
                 <h3 class="text-xl font-semibold mb-3">Cranial Drilling Practice Model</h3>
-                <p class="text-gray-600 text-base mb-4">
+                <p class="text-gray-600 text-base mb-4 flex-1">
                   Half skull model with brain and dura mater. Designed for practicing 
                   craniotomy techniques, burr hole placement, and safe drilling without 
                   dural penetration.
@@ -109,54 +110,86 @@ import "../styles/global.css";
 
       <section class="mb-16">
         <ScrollReveal>
-          <h2 class="text-2xl font-semibold mb-8 text-center">Why NeuroPrint Models?</h2>
+          <h2 class="text-4xl font-semibold mb-12 text-center">Why NeuroPrint Models?</h2>
         </ScrollReveal>
         
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid md:grid-cols-2 gap-12 items-stretch">
           
+          <!-- For Training Programmes -->
           <ScrollReveal delay={200}>
-            <div class="bg-gray-50 rounded-lg p-6">
-              <h3 class="text-xl font-semibold mb-4">For Training Programmes</h3>
-              <ul class="text-base text-gray-600 space-y-2">
-                <li>• Repeatable practice without cadaver dependency</li>
-                <li>• Multiple residents can train simultaneously</li>
-                <li>• Consistent anatomical quality</li>
-                <li>• No ethical or storage concerns</li>
-                <li>• Lower cost per training session</li>
+            <div class="bg-gradient-to-br from-jade-50 to-white rounded-lg p-10 border border-jade-100 h-full">
+              <div class="flex items-center gap-4 mb-8">
+                <div class="w-14 h-14 bg-jade-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-semibold">For Training Programmes</h3>
+              </div>
+              
+              <ul class="space-y-4">
+                <li class="flex items-start gap-4">
+                  <span class="text-jade-500 font-bold text-xl flex-shrink-0">•</span>
+                  <span class="text-gray-700 text-lg leading-relaxed">Repeatable practice without cadaver dependency</span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="text-jade-500 font-bold text-xl flex-shrink-0">•</span>
+                  <span class="text-gray-700 text-lg leading-relaxed">Multiple residents can train simultaneously</span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="text-jade-500 font-bold text-xl flex-shrink-0">•</span>
+                  <span class="text-gray-700 text-lg leading-relaxed">Consistent anatomical quality</span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="text-jade-500 font-bold text-xl flex-shrink-0">•</span>
+                  <span class="text-gray-700 text-lg leading-relaxed">No ethical or storage concerns</span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="text-jade-500 font-bold text-xl flex-shrink-0">•</span>
+                  <span class="text-gray-700 text-lg leading-relaxed">Lower cost per training session</span>
+                </li>
               </ul>
             </div>
           </ScrollReveal>
 
+          <!-- For Surgeons -->
           <ScrollReveal delay={400}>
-            <div class="bg-gray-50 rounded-lg p-6">
-              <h3 class="text-xl font-semibold mb-4">For Surgeons</h3>
-              <ul class="text-base text-gray-600 space-y-2">
-                <li>• Build muscle memory for critical procedures</li>
-                <li>• Practice rare or high-risk cases safely</li>
-                <li>• Train with actual surgical instruments</li>
-                <li>• Realistic tactile feedback</li>
-                <li>• Patient-specific anatomy when needed</li>
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-lg p-10 border border-gray-200 h-full">
+              <div class="flex items-center gap-4 mb-8">
+                <div class="w-14 h-14 bg-jade-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-semibold">For Surgeons</h3>
+              </div>
+              
+              <ul class="space-y-4">
+                <li class="flex items-start gap-4">
+                  <span class="text-jade-500 font-bold text-xl flex-shrink-0">•</span>
+                  <span class="text-gray-700 text-lg leading-relaxed">Build muscle memory for critical procedures</span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="text-jade-500 font-bold text-xl flex-shrink-0">•</span>
+                  <span class="text-gray-700 text-lg leading-relaxed">Practice rare or high-risk cases safely</span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="text-jade-500 font-bold text-xl flex-shrink-0">•</span>
+                  <span class="text-gray-700 text-lg leading-relaxed">Train with actual surgical instruments</span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="text-jade-500 font-bold text-xl flex-shrink-0">•</span>
+                  <span class="text-gray-700 text-lg leading-relaxed">Realistic tactile feedback</span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="text-jade-500 font-bold text-xl flex-shrink-0">•</span>
+                  <span class="text-gray-700 text-lg leading-relaxed">Patient-specific anatomy when needed</span>
+                </li>
               </ul>
             </div>
           </ScrollReveal>
 
         </div>
-      </section>
-
-      <section class="mb-16">
-        <ScrollReveal>
-         <h2 class="text-2xl font-semibold mb-8 text-center">Model Development</h2>
-        </ScrollReveal>
-
-        <ScrollReveal delay={200}>
-          <div class="bg-jade-50 rounded-lg p-8">
-            <p class="text-gray-700 text-center max-w-3xl mx-auto">
-              Our models are derived from real patient MRI and CT scans, processed by bioengineers 
-              with clinical neurosurgical input. Each model undergoes validation with practicing 
-              neurosurgeons to ensure anatomical accuracy and surgical realism.
-            </p>
-          </div>
-        </ScrollReveal>
       </section>
 
       <section class="bg-gray-50 rounded-lg p-8 text-center">

@@ -8,7 +8,7 @@ import "../styles/global.css";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/jadesnow-logo.png" />
     <meta name="viewport" content="width=device-width" />
     <title>Jade Snow Medical - Surgical Training & Pre-Operative Planning</title>
   </head>
@@ -22,10 +22,11 @@ import "../styles/global.css";
         <img 
           src="/images/dicom_2.jpg" 
           alt="3D medical imaging" 
-          class="w-full h-full object-cover opacity-50"
+          class="w-full h-full object-cover opacity-80"
         />
-        <div class="absolute inset-0 bg-gradient-to-b from-white/80 via-white/70 to-white"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-white/20 via-white/80 to-white/100">
       </div>
+    </div>
       
       <!-- Content -->
       <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
@@ -136,7 +137,7 @@ import "../styles/global.css";
     </section>
 
     <!-- Clinical Impact - Combined Stats -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-gray-100">
       <div class="max-w-7xl mx-auto px-6">
         <ScrollReveal>
           <div class="text-center mb-12">
@@ -227,10 +228,10 @@ import "../styles/global.css";
     </section>
 
     <!-- Partners & Supporters -->
-    <section class="py-20 bg-gray-900">
+    <section class="py-20 bg-white border-y border-gray-200">
       <div class="max-w-7xl mx-auto px-6">
         <ScrollReveal>
-          <h2 class="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-16">
+          <h2 class="text-center text-xs font-semibold text-gray-500 uppercase tracking-widest mb-16">
             Supported by leading institutions
           </h2>
         </ScrollReveal>
@@ -243,7 +244,7 @@ import "../styles/global.css";
               <img 
                 src="/images/ucl-hatchery.png" 
                 alt="UCL Hatchery" 
-                class="max-h-full max-w-full object-contain filter brightness-0 invert"
+                class="max-h-full max-w-full object-contain"
               />
             </div>
           </ScrollReveal>
@@ -252,7 +253,7 @@ import "../styles/global.css";
           <ScrollReveal delay={200}>
             <div class="flex items-center justify-center h-16 w-40 opacity-80 hover:opacity-100 transition-opacity duration-300">
               <img 
-                src="/images/cjbs_logo_2.png" 
+                src="/images/cjbs_logo_3.png" 
                 alt="Accelerate Cambridge Judge Business School" 
                 class="max-h-full max-w-full object-contain"
               />
@@ -352,7 +353,7 @@ import "../styles/global.css";
     </section>
 
     <!-- Use Cases -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-gray-100">
       <div class="max-w-7xl mx-auto px-6">
         <ScrollReveal>
           <h2 class="text-4xl font-semibold text-center mb-12">Who uses our models</h2>
@@ -405,45 +406,62 @@ import "../styles/global.css";
       </div>
     </section>
 
-    <!-- Mission & Vision Cards -->
-    <div class="grid md:grid-cols-2 gap-12 mb-16">
-      
-      <!-- Mission -->
-      <ScrollReveal delay={100}>
-        <div class="relative bg-gradient-to-br from-jade-50 to-white rounded-2xl p-8 border border-jade-100 flex flex-col h-full">
-          <div class="absolute -top-6 left-8 w-12 h-12 bg-jade-500 rounded-xl flex items-center justify-center shadow-lg">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <ScrollReveal>  
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-semibold text-gray-900 mb-4">
+              Our Purpose
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Building a future where every surgeon has access to realistic rehearsal tools
+            </p>
           </div>
-          <h3 class="text-2xl font-semibold mb-4 mt-4">Our Mission</h3>
-          <p class="text-gray-700 leading-relaxed flex-1">
-            To transform surgical education and pre-operative planning by providing clinicians 
-            with patient-specific, lifelike anatomical models that bridge the gap between 
-            imaging and intervention.
-          </p>
-        </div>
-      </ScrollReveal>
+        </ScrollReveal>
 
-      <!-- Vision -->
-      <ScrollReveal delay={200}>
-        <div class="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white flex flex-col h-full">
-          <div class="absolute -top-6 left-8 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
-            <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-semibold mb-4 mt-4">Our Vision</h3>
-          <p class="text-gray-100 leading-relaxed flex-1">
-            A world where surgical training is standardized, ethical, and universally accessible. 
-            Where every complex procedure is rehearsed before it is performed. Where patient 
-            outcomes improve through deliberate practice.
-          </p>
-        </div>
-      </ScrollReveal>
+        <!-- Mission & Vision Cards -->
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+          
+          <!-- Mission -->
+          <ScrollReveal delay={100}>
+            <div class="relative bg-gradient-to-br from-jade-50 to-white rounded-2xl p-8 border border-jade-100 flex flex-col h-full">
+              <div class="absolute -top-6 left-8 w-12 h-12 bg-jade-500 rounded-xl flex items-center justify-center shadow-lg">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4 mt-4">Our Mission</h3>
+              <p class="text-gray-700 leading-relaxed flex-1">
+                To transform surgical education and pre-operative planning by providing clinicians 
+                with patient-specific, lifelike anatomical models that bridge the gap between 
+                imaging and intervention.
+              </p>
+            </div>
+          </ScrollReveal>
 
-    </div>
+          <!-- Vision -->
+          <ScrollReveal delay={200}>
+            <div class="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white flex flex-col h-full">
+              <div class="absolute -top-6 left-8 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
+                <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4 mt-4">Our Vision</h3>
+              <p class="text-gray-100 leading-relaxed flex-1">
+                A world where surgical training is standardized, ethical, and universally accessible. 
+                Where every complex procedure is rehearsed before it is performed. Where patient 
+                outcomes improve through deliberate practice.
+              </p>
+            </div>
+          </ScrollReveal>
+
+        </div>
+
         <!-- Three Core Values - More Visual -->
         <div class="grid md:grid-cols-3 gap-6">
           
