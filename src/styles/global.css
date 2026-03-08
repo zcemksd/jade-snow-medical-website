@@ -182,3 +182,11 @@ body {
     font-size: 1.5rem !important;
   }
 }
+
+/* Text justification for content blocks */
+.text-justify-content p {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+}
